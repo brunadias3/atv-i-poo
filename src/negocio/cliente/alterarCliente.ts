@@ -24,10 +24,12 @@ export default class AlterarCliente extends Alterar {
         let dia = new Number(partesData[0].valueOf()).valueOf()
         let dataEmissao = new Date(ano, mes, dia)
         let cpf = new CPF(valor, dataEmissao);
+        let genero = this.entrada.receberTexto(`Qual genero (F-Feminino) (M-Masculino): `)
+        
         if (indice != -1) {
             let novoNome = this.entrada.receberTexto(`Por favor informe o NOVO nome: `)
-            let cliente = new Cliente(novoNome, nomeSocial, cpf);
-            this.clientes.push(cliente)
+            let cliente = new Cliente(novoNome, nomeSocial, cpf, genero);
+            this.clientes[indice] = cliente;
         }
     
         console.log(`\nAlterado com sucesso!\n`);

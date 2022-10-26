@@ -6,4 +6,10 @@ export default class Produto {
         this.nome = nome
         this.preco = preco
     }
+    public get getPreco():number {
+        return this.preco
+    }
+    public get getNome(): string{
+        return this.nome
+    }
 }

@@ -23,7 +23,9 @@ export default class CadastroCliente extends Cadastro {
         let dia = new Number(partesData[0].valueOf()).valueOf()
         let dataEmissao = new Date(ano, mes, dia)
         let cpf = new CPF(valor, dataEmissao);
-        let cliente = new Cliente(nome, nomeSocial, cpf);
+        let genero = this.entrada.receberTexto(`Por favor informe o gênero (F/M): `)
+        
+        let cliente = new Cliente(nome, nomeSocial, cpf, genero);
         this.clientes.push(cliente)
         console.log(`\nCadastro concluído :)\n`);
     }

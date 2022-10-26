@@ -13,6 +13,7 @@ export default class ListagemClientes extends Listagem {
             console.log(`Nome: ` + cliente.nome);
             console.log(`Nome social: ` + cliente.nomeSocial);
             console.log(`CPF: ` + cliente.getCpf.getValor);
+            console.log(`Gênero: ` + cliente.genero)
             console.log(`--------------------------------------`);
         });
         console.log(`\n`);

@@ -6,4 +6,10 @@ export default class Servico {
         this.nome = nome
         this.preco = preco
     }
+    public get getNomeServiço():string{
+        return this.nome
+    }
+    public get getPrecoServiço():number{
+        return this.preco
+    }
 }
