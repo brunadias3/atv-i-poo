@@ -1,9 +1,16 @@
 <p align="center">
 <h1 align="center"> FATEC Profº Jessen Vidal, SJC - 3º Semestre ADS </h1>
 
-<h2> 📑 Atividade 1- Programação Orientada a Objeto </h2>
+<h2> 📑 Atividade 2 - Programação Orientada a Objeto </h2>
 <p>
-O trabalho da sua empresa é desenvolver uma agenda de clientes para o grupoWB. Esta agenda, inicialmente, será  um  sistema  do  tipo  cli  (command-line  interface),  ou  seja,  deverá  funcionar  sem  uma  interface  gráfica muito elaborada, apenas pela linha de comando. Além disso, cada unidade terá sua própria agenda, os dados não serão compartilhados entre as unidades do grupo WB.
+O sistema desenvolvido para o grupo WB foi um sucesso. Todas as franquias do grupo adotaram a solução 
+desenvolvida por você, na tua empresa especializada em desenvolvimento de software. Mas, apesar de todo o 
+sucesso, há uma questão ainda não resolvida. O sistema não tem uma GUI.
+Sem GUI, o uso do sistema tornou-se inapropriado para um ambiente web, onde a principal ferramenta é o 
+navegador. Desta forma, corre-se o risco de o software tornar-se defasado e perder para concorrências 
+futuras. Por isso, o próximo objetivo do desenvolvimento e atualizar o sistema com uma GUI moderna e que 
+funcione tanto em navegadores comuns quanto em navegadores de dispositivos móveis, como celulares e/ou 
+tablets por exemplo.
 </p>
    
 <div id='equipe'>
@@ -25,6 +32,10 @@ git clone https://github.com/brunadias3/atv-i-poo
 ```
 - Na pasta raiz do projeto, digite:
 ```
+git fetch
+
+git checkout AtvII
+
 npx tsc ou tsc
 ```
 - Agora instale as dependências do projeto:
@@ -33,4 +44,4 @@ npm install
 ``` 
 - Execute a aplicação pelo seguinte comando:
 ```
-node out/app/main.js
+npm start
