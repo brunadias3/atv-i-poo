@@ -3,6 +3,7 @@ import { Component } from "react";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Roteador from './roteador';
+import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 
 type props = {
