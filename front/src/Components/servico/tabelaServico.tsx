@@ -6,16 +6,12 @@ type props = {
     servico:Array<any>,
     
 }
-class TabelasServico extends Component<props> {
-    constructor(props: props | Readonly<props>) {
-        super(props)
-        this.gerarTr = this.gerarTr.bind(this)
-    }
-    gerarTr() {
-        if (this.props.servico.length <= 0) {
+function TabelasServico (props:props) {
+    function gerarTr() {
+        if (props.servico.length <= 0) {
             return <></>
         } else {
-            let lista = this.props.servico.map( (n) =>
+            let lista = props.servico.map( (n) =>
             <tr id={n.Id}>
             <td>{n.Nome}</td>
             <td>{n.Preco}</td>
@@ -35,9 +31,6 @@ class TabelasServico extends Component<props> {
             return lista
         }
     }
-
-
-    render(){
         return(
                 <div className="row" >
                 <div className="col s12" >
@@ -52,19 +45,13 @@ class TabelasServico extends Component<props> {
                     </thead>
 
                     <tbody>
-                        {this.gerarTr()}
+                        {gerarTr()}
                   
                     </tbody>
                 </table>
                 </div>
-            </div>
-                
-               
-            
-                                   
-           
+            </div> 
         )
 
     }
-}
 export default TabelasServico;

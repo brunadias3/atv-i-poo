@@ -2,10 +2,8 @@ import React, {Component} from "react";
 import BarraNavegacao from "../barraNavegacao";
 import "../../Css/clientes.css"
 import { Link } from "react-router-dom";
-class CadastroProduto extends Component{
-   
-    
-    render(){
+
+function CadastroProduto () { 
         var botoes = [{valor: "CLIENTES", link:"/Clientes"}, {valor: "SERVIÇOS", link:"/servicos"},{valor: "PRODUTOS", link:"/produtos"} ]
         let barraNavegacao = <BarraNavegacao  tema="purple accent-4" botoes={botoes} />;
         return(
@@ -62,6 +60,4 @@ class CadastroProduto extends Component{
         )
         
     }
-    
-}
 export default CadastroProduto;

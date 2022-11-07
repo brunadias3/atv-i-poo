@@ -2,13 +2,12 @@ import React, {Component} from "react";
 import BarraNavegacao from "../barraNavegacao";
 import "../../Css/clientes.css"
 import { Link } from "react-router-dom";
-class CadastroClienteServico extends Component{
-    componentDidMount() {
+
+function CadastroClienteServico (){
+    function componentDidMount() {
             let select = document.querySelectorAll('.select');
             M.FormSelect.init(select)
     }
-    
-    render(){
         var botoes = [{valor: "CLIENTES", link:"/Clientes"}, {valor: "SERVIÇOS", link:"/servicos"},{valor: "PRODUTOS", link:"/produtos"} ]
         let barraNavegacao = <BarraNavegacao  tema="purple accent-4" botoes={botoes} />;
         return(
@@ -74,6 +73,4 @@ class CadastroClienteServico extends Component{
         )
         
     }
-    
-}
 export default CadastroClienteServico;

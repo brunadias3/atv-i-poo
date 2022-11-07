@@ -6,21 +6,21 @@ type props = {
     clientes:Array<any>,
     
 }
-class TabelasCliente extends Component<props> {
-    constructor(props: props | Readonly<props>) {
-        super(props)
-        this.gerarTr = this.gerarTr.bind(this)
-    }
-    gerarTr() {
-        if (this.props.clientes.length <= 0) {
+function TabelasCliente (props:props) {
+    
+    function gerarTr() {
+        if (props.clientes.length <= 0) {
             return <></>
         } else {
-            let lista = this.props.clientes.map( (n) =>
+            let lista = props.clientes.map( (n) =>
             <tr id={n.Id}>
             <td>{n.Nome}</td>
             <td>{n.NomeSocial}</td>
             <td>{n.Genero}</td>
+            <td>{n.Cpf}</td>
+            <td>{n.Rg}</td>
             <td>{n.Telefone}</td>
+            
             <td className="center">
                 <Link className="" to="/editarCliente"> 
                     <i className=" botaoMedium small material-icons">create</i> 
@@ -39,8 +39,6 @@ class TabelasCliente extends Component<props> {
         }
     }
 
-
-    render(){
         return(
                 <div className="row" >
                 <div className="col s12" >
@@ -50,25 +48,21 @@ class TabelasCliente extends Component<props> {
                         <th>Nome</th>
                         <th>Nome Social</th>
                         <th>Gênero</th>
+                        <th>Cpf</th>
+                        <th>Rg</th>
                         <th>Telefone</th>
                         <th className="center">Ações</th>
                     </tr>
                     </thead>
 
                     <tbody>
-                        {this.gerarTr()}
+                        {gerarTr()}
                   
                     </tbody>
                 </table>
                 </div>
             </div>
-                
-               
-            
-                                   
-           
         )
-
     }
-}
+
 export default TabelasCliente;

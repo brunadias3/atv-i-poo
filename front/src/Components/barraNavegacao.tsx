@@ -1,25 +1,18 @@
-import { Component } from "react";
+import { Component, JSXElementConstructor, Key, ReactElement, ReactFragment } from "react";
 import 'materialize-css/dist/css/materialize.min.css'
 import M from 'materialize-css'
 import { Link } from "react-router-dom";
 import '../Css/barraNavegacao.css';
 import logo from "../Img/WB.png"
 
-
 type props = {
     tema: string,
     botoes:Array<any>,
-    
 }
 
-export default class BarraNavegacao extends Component<props> {
-    constructor(props: props | Readonly<props>) {
-        super(props)
-        this.gerarListaBotoes = this.gerarListaBotoes.bind(this)
-    }
-
-    componentDidMount() {
-       
+export default function BarraNavegacao(props:props) {
+    
+    function componentDidMount() {
             let elems = document.querySelectorAll('.sidenav');
             M.Sidenav.init(elems)
 
@@ -28,11 +21,11 @@ export default class BarraNavegacao extends Component<props> {
         
     }
 
-    gerarListaBotoes() {
-        if (this.props.botoes.length <= 0) {
+    function gerarListaBotoes() {
+        if (props.botoes.length <= 0) {
             return <></>
         } else {
-            let lista = this.props.botoes.map( (n) =>
+            let lista = props.botoes.map( (n:any) =>
                 <li key={n.valor} className="botoes">
                      <Link className="botoes" to={n.link}>{n.valor}</Link>
                 </li>
@@ -41,12 +34,11 @@ export default class BarraNavegacao extends Component<props> {
         }
     }
 
-    render() {
-        let estilo = `${this.props.tema}`
-        return (
+    return (
+        // const estilo = `${props.tema}`
             <>
             
-                <nav className={estilo} style={{"height":80}} >
+                <nav className={props.tema} style={{"height":80}} >
                     <div className="nav-wrapper" style={{"padding":10}}>
                         <Link  to="/"className="brand-logo" >
                         <img  width="70"src={logo} alt="WB" />
@@ -55,15 +47,14 @@ export default class BarraNavegacao extends Component<props> {
                         <a data-target="mobile-menu" className="sidenav-trigger"><i className="material-icons">menu</i>
                         </a>
                         <ul className="right hide-on-med-and-down">
-                            {this.gerarListaBotoes()}
+                            {gerarListaBotoes()}
                         </ul>
                     </div>
                 </nav>
                 <ul className="sidenav" id="mobile-menu">
-                    {this.gerarListaBotoes()}
+                    {gerarListaBotoes()}
                 </ul>
               
             </>
         )
-    }
 }

@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import BarraNavegacao from "./barraNavegacao";
 import '../Css/home.css';
-class Home extends Component{
+// class Home extends Component{
 
-    render(){
+function Home(props:any) {
         var botoes = [{valor: "CLIENTES", link:"/Clientes"}, {valor: "SERVIÇOS", link:"/servicos"},{valor: "PRODUTOS", link:"/produtos"} ]
         let barraNavegacao = <BarraNavegacao  tema="purple accent-4" botoes={botoes} />;
         return(
@@ -21,5 +21,5 @@ class Home extends Component{
         )
 
     }
-}
+
 export default Home;

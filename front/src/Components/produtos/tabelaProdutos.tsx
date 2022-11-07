@@ -6,16 +6,13 @@ type props = {
     produto:Array<any>,
     
 }
-class TabelasProduto extends Component<props> {
-    constructor(props: props | Readonly<props>) {
-        super(props)
-        this.gerarTr = this.gerarTr.bind(this)
-    }
-    gerarTr() {
-        if (this.props.produto.length <= 0) {
+function TabelasProduto (props:props) {
+    
+    function gerarTr() {
+        if (props.produto.length <= 0) {
             return <></>
         } else {
-            let lista = this.props.produto.map( (n) =>
+            let lista = props.produto.map( (n) =>
             <tr id={n.Id}>
             <td>{n.Nome}</td>
             <td>{n.Preco}</td>
@@ -36,8 +33,6 @@ class TabelasProduto extends Component<props> {
         }
     }
 
-
-    render(){
         return(
                 <div className="row" >
                 <div className="col s12" >
@@ -52,19 +47,13 @@ class TabelasProduto extends Component<props> {
                     </thead>
 
                     <tbody>
-                        {this.gerarTr()}
+                        {gerarTr()}
                   
                     </tbody>
                 </table>
                 </div>
-            </div>
-                
-               
-            
-                                   
-           
+            </div>                            
         )
-
     }
-}
+
 export default TabelasProduto;
