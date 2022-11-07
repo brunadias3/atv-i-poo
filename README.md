@@ -34,7 +34,7 @@ git clone https://github.com/brunadias3/atv-i-poo
 ```
 git fetch
 
-git checkout AtvII
+git checkout AtvIII
 
 npx tsc ou tsc
 ```
