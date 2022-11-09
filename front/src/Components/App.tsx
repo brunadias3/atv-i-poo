@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import 'materialize-css/dist/css/materialize.min.css'
 import Home from './Home';
-import Teste2 from './Teste2';
 import Cadastro from './clientes/cadastro';
 import Editar from './clientes/editar';
 import ClientesIndex from './clientes/clientes';
