@@ -20,15 +20,6 @@ function App() {
   const state = {
     response: ''
   };
-  const handleClick = () => {
-    fetch("/vamo", {
-      method: "GET",
-    }).then((response) => response.text()).then((data) => {
-      useState({
-        response: state.response + data
-      })
-    })
-  };
 
   return (
     <div className="App">
