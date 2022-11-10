@@ -33,7 +33,8 @@ git checkout AtvIII
 npx tsc ou tsc
 ```
 - Agora instale as dependências do projeto:
-``` 
+```
+cd front
 npm install
 ``` 
 - Execute a aplicação pelo seguinte comando:
