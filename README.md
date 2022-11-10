@@ -36,7 +36,6 @@ git fetch
 
 git checkout AtvII
 
-npx tsc ou tsc
 ```
 - Agora instale as dependências do projeto:
 ``` 
@@ -44,4 +43,5 @@ npm install
 ``` 
 - Execute a aplicação pelo seguinte comando:
 ```
+cd front
 npm start
