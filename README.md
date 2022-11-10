@@ -39,9 +39,9 @@ git checkout AtvII
 ```
 - Agora instale as dependências do projeto:
 ``` 
+cd front
 npm install
 ``` 
 - Execute a aplicação pelo seguinte comando:
 ```
-cd front
 npm start
