@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import BarraNavegacao from "../barraNavegacao";
 import "../../Css/clientesIndex.css"
@@ -99,12 +98,12 @@ var mulheres = [{
 }]
 export default function ClientesIndex() {
 
-    function componentDidMount() {
-        let el = document.querySelectorAll('.tabs');
-        M.Tabs.init(el)
-    }
+    let el = document.querySelectorAll('.tabs');
+    M.Tabs.init(el)
+
     var botoes = [{ valor: "CLIENTES", link: "/Clientes" }, { valor: "SERVIÇOS", link: "/servicos" }, { valor: "PRODUTOS", link: "/produtos" }]
     let barraNavegacao = <BarraNavegacao tema="purple accent-4" botoes={botoes} />;
+
     return (
         <div>
             {barraNavegacao}
@@ -138,7 +137,7 @@ export default function ClientesIndex() {
                                         <div id="test1" className="col s12">
                                             <TabelasCliente clientes={dados} />
                                         </div>
-                                        <div id="test2" className="col s12">
+                                        <div id="test2" className="col s12" >
                                             <TabelasCliente clientes={homens} />
                                         </div>
                                         <div id="test3" className="col s12">
