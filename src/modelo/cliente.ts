@@ -68,4 +68,10 @@ export default class Cliente {
 
         }
     }
+    public addRg(rg:RG){
+        this.rgs.push(rg);
+    }
+    public addTel(telefone:Telefone){
+        this.telefones.push(telefone);
+    }
 }
