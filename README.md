@@ -29,7 +29,7 @@ Após a instalação:
 - Em <i>Default Target Schema</i>, crie um novo schema chamado "wb".
 - Clique na aba "Import Progress", e por fim "Start Import"
   
-  Para executar a aplicação, certifique-se de ter instalado o NodeJs em seu computador:
+Para executar a aplicação, certifique-se de ter instalado o NodeJs em seu computador:
 - Faça o clone do repositório:
 
 ```
