@@ -1,9 +1,11 @@
 <p align="center">
 <h1 align="center"> FATEC Profº Jessen Vidal, SJC - 3º Semestre ADS </h1>
 
-<h2> 📑 Atividade 1- Programação Orientada a Objeto </h2>
+<h2> 📑 Atividade 5 - Programação Orientada a Objeto </h2>
 <p>
-O trabalho da sua empresa é desenvolver uma agenda de clientes para o grupoWB. Esta agenda, inicialmente, será  um  sistema  do  tipo  cli  (command-line  interface),  ou  seja,  deverá  funcionar  sem  uma  interface  gráfica muito elaborada, apenas pela linha de comando. Além disso, cada unidade terá sua própria agenda, os dados não serão compartilhados entre as unidades do grupo WB.
+O objetivo final é criar uma aplicação web, na abordagem SPA, que atenda a todos os requisitos que o sistema 
+precisa ter, para atender aos clientes da WB. Os requisitos foram descritos na atvi, a primeira atividade que 
+deu origem a empresa de desenvolvimento de software. Busque os requisitos na documentação da atvi.
 </p>
    
 <div id='equipe'>
@@ -16,6 +18,16 @@ O trabalho da sua empresa é desenvolver uma agenda de clientes para o grupoWB. 
 
   
 <h2> ⛏️ Para executar a aplicação</h2>
+
+É necessário instalar o <a href="https://dev.mysql.com/downloads/workbench/">MYSQL Workbench</a>.
+
+Após a instalação:
+- Clique na conexão "Local instance"
+- Na aba <i>Server</i>, clique em <i>Data Import</i>
+- Em seguida, clique no checkbox <i>Import from Self-Contained File</i>
+- importe o arquivo wb.sql
+- Em <i>Default Target Schema</i>, crie um novo schema chamado "wb".
+- Clique na aba "Import Progress", e por fim "Start Import"
   
   Para executar a aplicação, certifique-se de ter instalado o NodeJs em seu computador:
 - Faça o clone do repositório:
@@ -25,12 +37,23 @@ git clone https://github.com/brunadias3/atv-i-poo
 ```
 - Na pasta raiz do projeto, digite:
 ```
-npx tsc ou tsc
+git fetch
+
+git checkout AtvV
+
 ```
 - Agora instale as dependências do projeto:
-``` 
+```
+cd front
 npm install
-``` 
+cd ..
+cd Backend
+npm install
+```
+- Na pasta Backend/Conexao, no arquivo conexao.ts, mude a senha para a mesma senha que você cadastrou no seu Workbench para o usuário root, e em seguida, execute o seguinte comando para compilar:
+```
+npx tsc ou tsc
+```
 - Execute a aplicação pelo seguinte comando:
 ```
-node out/app/main.js
+npm run dev

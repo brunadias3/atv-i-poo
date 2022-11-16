@@ -1,0 +1,28 @@
+.botoesClientes{
+    float:right;
+}
+.botaoMedium{
+    color: blueviolet;
+    margin: 2px;
+    cursor: pointer;
+
+}
+.center{
+    align-items: center;
+}
+.tabs .indicator{
+    background-color: blueviolet;
+}
+.tabs .tab a{
+    color:blueviolet !important;
+}
+.tabs .tab a:hover{
+    color:blueviolet
+}
+.tabs .tab a:active{
+    color:blueviolet
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background: transparent;
+    color:blueviolet
+}
